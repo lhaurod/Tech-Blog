@@ -1,7 +1,7 @@
 # Tech-Blog
   
-  ## Purpoose
-  This application was created with the intention of being a platform for tech-savvy and interested individuals to collaborate and write about relevant topics that they are studying or involved in.
+## Purpose
+This  MS-style blog site was created with the intention of publish articles, blog posts or any thoughts and opinions you might have.
 
 
 ## Built with
