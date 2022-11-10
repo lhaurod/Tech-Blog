@@ -1,0 +1,22 @@
+[
+    {
+      "user_name": "Newbie Dev",
+      "password": "password12345"
+    },
+    {
+      "user_name": "Bug Slayer",
+      "password": "password12345"
+    },
+    {
+      "user_name": "Digital Nomad",
+      "password": "password12345"
+    },
+    {
+      "user_name": "AgileDev",
+      "password": "password12345"
+    },
+    {
+      "user_name": "Uncle Bob",
+      "password": "password12345"
+    }
+  ]

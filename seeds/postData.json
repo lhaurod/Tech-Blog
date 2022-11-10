@@ -1,0 +1,27 @@
+[
+    {
+      "creator_id": 1,
+      "post_title": "Coding Rocks",
+      "post_body": "Dude I love coding so much who is with me? Making the computer do what I want is such a rush."
+    },
+    {
+      "creator_id": 2,
+      "post_title": "Chrome Dev Tools are so useful",
+      "post_body": "Holy cow where would I be in my front-end development career without Chrome Dev Tools. I can see if CSS or Scripts are being loaded correctly in the network tab and I can see exactly why my positioning doesn't look right even though I have made 14,000 changes to the CSS."
+    },
+    {
+      "creator_id": 3,
+      "post_title": "Best places to live for remote coders.",
+      "post_body": "I have spent the last 6 months living and working remotely from Chiang-mai, Thailand. The internet here is super fast! It was a bit of an adjustment to be living and working on California time over here but between my rewarding career collaborating/ solving problems, and living in a country so rich with culture, my horizons have really expanded."
+    },
+    {
+      "creator_id": 4,
+      "post_title": "Agile Development. This is the way.",
+      "post_body": "Agile development methodology allows flexibility for both developer and client, and on the whole seems to result in a better and more timely product delivery, especially when the needs of the project seem to be in an ever-changing state."
+    },
+    {
+      "creator_id": 5,
+      "post_title": "Clean Code",
+      "post_body": "Taking the time to write code in a readable and well-formatted manner with modularization and separation of concerns is absolutely essential to any development project, and especially if the project is going to be presented as a service over time. As code becomes more of a thicket of random and mis-aligned parts, team productivity steadily goes down over time. Thus, taking the time to refactor and clean up code in line with overall standards agreed upon in the project will not only save time in the long run, but extend the life of the current codebase exponentially."
+    }
+  ]

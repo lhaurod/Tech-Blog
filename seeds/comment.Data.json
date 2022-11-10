@@ -1,0 +1,52 @@
+[
+    {
+      "creator_id": 2,
+      "post_id": 1,
+      "comment_body": "Dude can you post something actually relevant please lol"
+    },
+    {
+      "creator_id": 3,
+      "post_id": 1,
+      "comment_body": "Ignore the other comment, he is full of himself. Love your enthusiasm! Remember that development is a marathon, not a sprint."
+    },
+    {
+      "creator_id": 1,
+      "post_id": 2,
+      "comment_body": "I would not have made it through my coding bootcamp without Chrome Dev Tools!!!! TOTALLY agree."
+    },
+    {
+      "creator_id": 3,
+      "post_id": 2,
+      "comment_body": "The Browser Tools are definitely important- but be prepared for when you start working with Node.js as you can't use them to debug backend code as much."
+    },
+    {
+      "creator_id": 1,
+      "post_id": 3,
+      "comment_body": "WOAH. I can potentially work virtually full time and live abroad?? How much experience do I need to feasibly get to that point?!"
+    },
+    {
+      "creator_id": 2,
+      "post_id": 3,
+      "comment_body": "I've been in talks with a remote employer the last week! Hope to be doing something similar in the near future. Thanks for the tip!"
+    },
+    {
+      "creator_id": 5,
+      "post_id": 4,
+      "comment_body": "I remember when Agile development came on the scene. Interested to see what the next dev movement will be."
+    },
+    {
+      "creator_id": 2,
+      "post_id": 4,
+      "comment_body": "Agile development is so much more versatile and adaptable than the original waterfall methodology."
+    },
+    {
+      "creator_id": 1,
+      "post_id": 5,
+      "comment_body": "I will take your advice Uncle Bob."
+    },
+    {
+      "creator_id": 4,
+      "post_id": 5,
+      "comment_body": "Couldn't agree more. Worked at a company where when I first started, the code base was such a mess they decided to do a complete rebuild. I was tasked with maintaining the old code base until the new build could be deployed- that was a challenge. By the end of my time at the company, the original devs had moved on in their careers and the codebase had once again become so messy and hard to work with they were gearing up to do another from-scratch build. Clean code is serious stuff!"
+    }
+  ]
