@@ -1,0 +1,135 @@
+<h1 class="text-center my-4">Welcome to your dashboard, {{user_name}}</h1>
+
+<button type="button" class="btn btn-warning mx-auto mb-4 col-8 col-md-6 col-lg-4" data-bs-toggle="modal"
+  data-bs-target="#newPostModal">Create a New Blog
+  Post!</button>
+
+<div class="card my-2 mx-auto col-12 col-md-10 col-lg-8">
+  <div class="card-body col-md-12 col-lg-10 mx-auto">
+    <h3 class="card-title">View/ Edit your previous blog posts:</h3>
+    <div class="accordion" id="accordionExample">
+      {{#each userPosts as |post|}}
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="heading{{post.id}} post-title-text">
+          <button id="title{{post.id}}" class="accordion-button" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapse{{post.id}}" aria-expanded="false" aria-controls="collapse{{post.id}}">
+            <div class="col-9 mx-1">
+              "{{post.post_title}}"
+            </div>
+            <div class="col-3">
+              <small>Posted {{format_date_time post.createdAt}}</small>
+            </div>
+
+          </button>
+        </h2>
+        <div id="collapse{{post.id}}" class="accordion-collapse collapse" aria-labelledby="heading{{post.id}}"
+          data-bs-parent="#accordionExample">
+          <div id="body{{post.id}}" class="accordion-body">
+            {{post.post_body}}
+            <div class="text-center my-2">
+            </div>
+          </div>
+          <hr>
+          <div class="text-center my-1">
+            <small>Last Updated: {{format_date_time post.updatedAt}}</small>
+          </div>
+          <div class="d-flex justify-content-center" id="postManageBtns">
+            <button class="btn btn-warning col-3 mx-2 my-1 edit" id="{{post.id}}" type="button" data-bs-toggle="modal"
+              data-bs-target="#editPostModal">Edit</button>
+            <button class="btn btn-danger col-3 mx-2 my-1 delete" id="{{post.id}}" data-bs-toggle="modal"
+              data-bs-target="#confirmPostDeleteModal">Delete</button>
+          </div>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="editPostModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Edit Post</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="post_title_edit" class="form-label">Update Post Title</label>
+            <input name="post_title_edit" type="text" class="form-control" id="post_title_edit" value="Test Blog Post">
+          </div>
+          <div class="mb-3">
+            <label for="post_body_edit" class="form-label">Update Post Body</label>
+            <textarea name="post_body_edit" type="textarea" class="form-control" id="post_body_edit"
+              aria-describedby="postBodyHelp"></textarea>
+            <input type="text" class="d-none" id="post_id_reference">
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-warning" id="submit_post_update">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="modal fade" id="newPostModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Create New Blog Post</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="text-danger d-hidden my-1 small" id="errorMsg">An error occured. Please contact support.</p>
+        <form>
+          <div class="mb-3">
+            <label for="post_title" class="form-label">Post Title</label>
+            <input name="post_title" type="text" class="form-control" id="post_title">
+          </div>
+          <div class="mb-3">
+            <label for="post_body" class="form-label">Post Body</label>
+            <textarea name="post_body" type="textarea" class="form-control" id="post_body"
+              aria-describedby="postBodyHelp"></textarea>
+            <div id="postBodyHelp" class="form-text">(You can edit the post body later)</div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <div class="d-flex align-center my-4">
+          <button type="button" class="btn btn-warning" id="submit">Submit Blog
+            Post!</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="modal fade" id="confirmPostDeleteModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header text-danger">
+        <h5 class="modal-title" id="exampleModalLabel">Are you sure you want to delete this blog post?</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="text-danger d-hidden my-1 small" id="errorMsg">An error occured. Please contact support.</p>
+        <p>This action cannot be undone!</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <div class="d-flex align-center my-4">
+          <button type="button" class="btn btn-danger delete-post">Permanently Delete Post</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<script src="/js/dashboard.js"></script>
